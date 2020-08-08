@@ -2,6 +2,6 @@
 
 <%= @classroom.students.each do |s| %>
 <%puts @classroom %>
-<%puts s %>
+<%puts s.name %>
   <%= render partial: 'students/student', locals: {student: s} %>
   <%end%>
