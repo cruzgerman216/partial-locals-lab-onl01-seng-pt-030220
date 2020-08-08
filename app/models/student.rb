@@ -15,10 +15,7 @@ class Student < ActiveRecord::Base
   has_many :classrooms, through: :classroom_students
 
   def self.search(name)
-    students = Student.where("name LIKE ?", "%M%",name)
-    if students.count == 0
-      return Student.all
-    end
-    return students
+    students = self.all.select { |student| student.name.downcase.include?(name.downcase)}
+    students.count == 0 ? Student.all : students
   end
 end
