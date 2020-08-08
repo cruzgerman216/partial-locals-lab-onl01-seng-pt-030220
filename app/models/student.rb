@@ -16,7 +16,7 @@ class Student < ActiveRecord::Base
 
   def self.search(name)
     students = Student.where("name LIKE ?", "name")
-    if students.count == 0 
+    if students.count == 0
       return Student.all
     end
     return students
