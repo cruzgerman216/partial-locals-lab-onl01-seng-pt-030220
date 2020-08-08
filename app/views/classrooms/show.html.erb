@@ -3,5 +3,5 @@
 <%= @classroom.students.each do |s| %>
 <%puts @classroom %>
 <%puts s.name %>
-  <%= render partial: 'students/student', locals: {student: s} %>
+  <%= render partial: 'students/student', locals: {j: s} %>
   <%end%>
