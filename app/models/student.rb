@@ -16,5 +16,6 @@ class Student < ActiveRecord::Base
 
   def self.search(name)
 
+    []
   end
 end
